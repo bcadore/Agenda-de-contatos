@@ -16,16 +16,19 @@ function adicionaContato() {
   const nomeContato = document.getElementById("nome-contato");
   const numeroContato = document.getElementById("numero-contato");
 
-  nomes.push(nomeContato.value);
-  numeros.push(numeroContato.value);
-
-  let linha = "<tr>";
-  linha += `<td>${nomeContato.value}</td>`;
-  linha += `<td>${numeroContato.value}</td>`;
-  linha += "</tr>";
-
-  adicionaLinha += linha;
-
+  if (nomes.includes(nomeContato.value)) {
+    alert(`Erro! Contato com nome ou número já adicionado na agenda.`);
+  }else {
+    nomes.push(nomeContato.value);
+    numeros.push(numeroContato.value);
+  
+    let linha = "<tr>";
+    linha += `<td>${nomeContato.value}</td>`;
+    linha += `<td>${numeroContato.value}</td>`;
+    linha += "</tr>";
+  
+    adicionaLinha += linha;
+  }
   nomeContato.value = "";
   numeroContato.value = "";
 }
