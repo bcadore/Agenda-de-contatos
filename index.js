@@ -18,15 +18,16 @@ function adicionaContato() {
 
   if (nomes.includes(nomeContato.value)) {
     alert(`Erro! Contato com nome ou número já adicionado na agenda.`);
-  }else {
+  } else {
     nomes.push(nomeContato.value);
     numeros.push(numeroContato.value);
-  
+
     let linha = "<tr>";
+    linha += `<td>1</td>`;
     linha += `<td>${nomeContato.value}</td>`;
     linha += `<td>${numeroContato.value}</td>`;
     linha += "</tr>";
-  
+
     adicionaLinha += linha;
   }
   nomeContato.value = "";
