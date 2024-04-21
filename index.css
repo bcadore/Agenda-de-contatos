@@ -101,3 +101,35 @@ tbody {
   color: #1a0038;
   background-color: #cfa5ff;
 }
+
+@media (max-width: 760px) {
+  .container {
+    max-width: 760px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  main {
+    display: block;
+  }
+
+  form {
+    margin: 0px auto;
+  }
+
+  table {
+    width: 100%;
+    margin: 0px;
+  }
+
+  thead,
+  tfoot {
+    font-size: 18px;
+  }
+
+  thead th,
+  tfoot td {
+    padding: 3px 6px;
+  }
+}
